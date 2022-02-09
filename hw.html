@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <input id="my-text" type="text">
+        <button id="my-button">see text</button>
+        <input id="my-text2" type="text">
+        <button id="my-button2">see paragraph</button>
+        <button id="all-text">All text</button>
+    </section>
+
+    <script>
+        document.getElementById('my-button').addEventListener('click', function () {
+            const myText = document.getElementById('my-text');
+            console.log(myText.value);
+            myText.value = '';
+        });
+        document.getElementById('my-button2').addEventListener('click', function () {
+            const myP = document.getElementById('my-text2');
+            console.log(myP.value);
+            myP.value = '';
+        });
+        document.getElementById('all-text').addEventListener('click', function () {
+            const myText1 = document.getElementById('my-text');
+
+            const myP2 = document.getElementById('my-text2');
+
+            console.log(myText1.value + ' ' + myP2.value);
+            myText1.value = '';
+            myP2.value = '';
+        });
+
+    </script>
+</body>
+
+</html>
